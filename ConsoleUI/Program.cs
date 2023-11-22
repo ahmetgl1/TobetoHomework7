@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFrameWork;
 using DataAccess.Concrete.InMemory;
 
 namespace ConsoleUI
@@ -7,20 +8,19 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            
 
-
-            ProductManager productManager = new ProductManager(new InMemoryProductDal());
-
-            foreach (var item in productManager.GetAll())
+            CategoryManager categoryManager = new CategoryManager(new EFCategoryDal());
+            foreach (var item in categoryManager.GetAll())
             {
-                Console.WriteLine(item.ProductName);
+                Console.WriteLine(item.CategoryName);
 
 
             }
 
 
-
-
         }
+
+       
     }
 }

@@ -18,9 +18,10 @@ public class NorthwindContext : DbContext
     }
 
 
-    DbSet<Product> Products { get; set; }
-    DbSet<Category> Categorys { get; set; }
-    DbSet<Customer> Customers { get; set; }
+    public  DbSet<Product> Products { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+    public DbSet<Order> Orders { get; set; }
 
 
 
