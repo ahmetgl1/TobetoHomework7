@@ -11,6 +11,7 @@ namespace Business.Abstract
     {
 
         List<Product> GetAll();
-        
+        List<Product> GetAllByCategory(int categoryId);
+        List<Product> GetUnitById(decimal min,  decimal max);
     }
 }

@@ -26,4 +26,22 @@ public class ProductManager : IProductService
     {
         return _productDal.GetAll();
     }
+
+    public List<Product> GetAllByCategory(int categoryId)
+    {
+      
+        return _productDal.GetAll(c => c.CategoryId == categoryId);
+
+
+
+
+    }
+
+    public List<Product> GetUnitById(decimal min, decimal max)
+    {
+
+        return _productDal.GetAll(o => o.UnitPrice<= min && o.UnitPrice <= max);
+
+
+    }
 }
